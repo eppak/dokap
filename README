@@ -4,6 +4,11 @@ Simple and compact CMS system
 STATUS
 The project is an alpha release, not suitable for production environments.
 
+THIRD PARTY LIBRARIES
+- Bootstrap, https://github.com/twbs/bootstrap (Apache 2)
+- HTML Agility Pack, http://htmlagilitypack.codeplex.com/ (Ms-PL)
+- C# FTP Library, http://ftplib.codeplex.com/ (MIT)
+
 LICENSE
 The MIT License (MIT)
 Copyright (c) 2013 Alessandro Cappellozza (alessandro.cappellozza@gmail.com)
