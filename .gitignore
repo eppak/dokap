@@ -167,3 +167,11 @@ pip-log.txt
 #################
 ## dokap
 #################
+*/*/*/bootstrap.css
+*/*/*/bootstrap.min.css
+*/*/*/bootstrap-responsive.css
+*/*/*/bootstrap-responsive.min.css
+*/*/*/glyphicons-halflings.png
+*/*/*/glyphicons-halflings-white.png
+*/*/*/bootstrap.js
+*/*/*/bootstrap.min.js
