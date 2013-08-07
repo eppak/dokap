@@ -1,0 +1,15 @@
+﻿body { padding-top: 41px; padding-bottom: 40px; background-color: rgb(247, 247, 247); font-family: 'Open Sans', sans-serif;}
+@media (max-width: 980px) {.navbar-text.pull-right { float: none; padding-left: 5px; padding-right: 5px; } }
+
+.sidebar-nav { padding: 9px 0; }
+.top-banner {background-color:  rgb(44, 55, 66) !important;}
+.main-content { padding: 20px; margin-left: 10px !important; background-color: #fff; min-height: 640px !important; border-bottom: 1px solid rgb(218, 227, 233);  border-left: 1px solid rgb(218, 227, 233); border-right: 1px solid rgb(218, 227, 233); border-radius: 0 0 5px 5px; -moz-border-radius: 0 0 5px 5px;}
+
+
+.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
+background-color: rgb(51, 69, 90); border-radius: 3px; -moz-border-radius: 3px;}
+
+.items {width: 100%; float: left;}
+.item { background-color: rgb(247, 247, 247); width: 100px; height: 100px; float: left; text-transform: uppercase;  margin-right: 10px; margin-bottom: 10px; border: 1px solid rgb(218, 227, 233); border-radius: 5px; -moz-border-radius: 5px; padding: 5px; text-align: center; overflow: hidden; white-space: nowrap; font-weight: 300; font-size: 12px; text-overflow: ellipsis; }
+.item:hover {box-shadow: 0px 0px 5px silver; text-decoration: none;}
+.item span {font-size: 18px; display: block;}
