@@ -90,6 +90,7 @@
     </Compile>
     <Compile Include="edit\core\config.cs" />
     <Compile Include="edit\core\ftp.cs" />
+    <Compile Include="edit\core\security.cs" />
     <Compile Include="edit\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

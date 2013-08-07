@@ -21,19 +21,19 @@ namespace core
 
             ftpClient.Open(); 
             ftpClient.Login();      
-            ftpClient.SetCurrentDirectory(dirName);
+            ftpClient.SetCurrentDirectory(config.FTP_Root + dirName);
 
             foreach (FtpDirectoryInfo fd in ftpClient.GetDirectories())
                 { 
                     if (visibleItem(fd.Name)) {
-                                  Res.Add(new fsItem() {Name = fd.Name, isDirectory = true }); 
+                                  Res.Add(new fsItem() {Name = fd.Name, isDirectory = true, lastModify = Convert.ToDateTime(fd.LastWriteTime) }); 
                     }
                 }
 
             foreach (FtpFileInfo f in ftpClient.GetFiles())
                 {
                     if (visibleItem(f.Name)) {
-                        Res.Add(new fsItem() { Name = f.Name, isDirectory = false });
+                        Res.Add(new fsItem() { Name = f.Name, isDirectory = false, lastModify = Convert.ToDateTime(f.LastWriteTime) });
                     }
                 }
 
@@ -48,5 +48,6 @@ namespace core
     {
         public string Name;
         public bool isDirectory;
+        public DateTime lastModify;
     }
 }

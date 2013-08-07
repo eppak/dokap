@@ -10,6 +10,9 @@ namespace core
     {
 
         public static bool loaded = false;
+        public static string Security_Salt = "/";
+        public static int Security_Loops = 1;
+
         public static string FTP_Server = "";
         public static string FTP_Username = "";
         public static string FTP_Password = "";
@@ -19,6 +22,8 @@ namespace core
             XmlDocument doc = new XmlDocument();
             doc.Load(appDataRootPath + "config.xml");
 
+            Security_Salt = Convert.ToString(doc.SelectSingleNode("Config/security/@salt").InnerText);
+            Security_Loops = Convert.ToInt16(doc.SelectSingleNode("Config/security/@loops").InnerText);
 
             FTP_Server = Convert.ToString(doc.SelectSingleNode("Config/ftp/@server").InnerText);
             FTP_Username = Convert.ToString(doc.SelectSingleNode("Config/ftp/@username").InnerText);
@@ -40,5 +45,13 @@ namespace core
         }
 
 
+    }
+
+
+
+    public class dfdfdf
+    {
+        public string Name;
+        public bool isDirectory;
     }
 }

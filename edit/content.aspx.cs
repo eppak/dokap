@@ -40,35 +40,39 @@ namespace dokap.edit
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            string Res = "";       
-            if (!IsPostBack || !config.loaded) { config.load(); }
-            config.load();
+            string Res = "";
 
-
-     
-            List<core.fsItem> itemsList = core.ftp.dir(currentDir());
-            Res += makeItem("content.aspx?d=" + backDir(), "", "glyphicon-chevron-left");
-
-            foreach (core.fsItem i in itemsList)
+            try
             {
-                if (i.isDirectory)
-                {
-                    Res += makeItem("content.aspx?d=" + currentDir() + i.Name + "/", i.Name, "glyphicon-folder-open");
-                }
-            
-            }
+                if (!IsPostBack || !config.loaded) { config.load(); }
+                if (currentDir() != "/" && Request.QueryString["s"] != security.sha1SumLoop(currentDir())) { throw new Exception("Security error."); }
 
-            foreach (core.fsItem i in itemsList)
-            {
-                if (!i.isDirectory)
+                List<core.fsItem> itemsList = core.ftp.dir(currentDir());
+                Res += makeItem("content.aspx?d=" + backDir() + "&s=" + security.sha1SumLoop(backDir()), "", "glyphicon-chevron-left");
+
+                foreach (core.fsItem i in itemsList)
                 {
-                    Res += makeItem("edit.aspx?f=" + currentDir() + i.Name, i.Name, "glyphicon-list-alt");
+                    if (i.isDirectory)
+                    {
+                        Res += makeItem("content.aspx?d=" + currentDir() + i.Name + "/&s=" + security.sha1SumLoop(currentDir() + i.Name + "/"), i.Name, "glyphicon-folder-open");
+                    }
+
                 }
 
+                foreach (core.fsItem i in itemsList)
+                {
+                    if (!i.isDirectory)
+                    {
+                        Res += makeItem("edit.aspx?f=" + currentDir() + i.Name + "&s=" + security.sha1sum(currentDir() + i.Name), i.Name, "glyphicon-list-alt");
+                    }
+
+                }
+            }
+            catch (Exception ex) {
+                Res = ex.Message;
             }
 
-            Items.Text = Res;
-            
+            Items.Text = Res;            
         }
 
         protected string makeItem(string link, string name, string icon) {
