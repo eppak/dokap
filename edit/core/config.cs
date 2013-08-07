@@ -49,9 +49,9 @@ namespace core
 
 
 
-    public class dfdfdf
+    public class fsEntry
     {
         public string Name;
-        public bool isDirectory;
+        public bool Include;
     }
 }
