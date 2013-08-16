@@ -19,17 +19,40 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using core;
 
-namespace dokap.edit
+namespace editors
 {
-    public partial class Default : core.page
+    public class editor
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
+        protected string _localFile = "";
+        protected string _remoteFile = "";
 
+        protected void remoteLoad(string remoteFile, string localFile)
+        {
+            ftp.getFile(remoteFile, localFile);
         }
+
+        protected void remoteSave(string remoteFile, string localFile)
+        {
+            ftp.putFile(remoteFile, localFile);
+        }
+
+    }
+
+    interface IEditor
+    {
+        string render(bool getFile);
+        string save(HttpRequest data);
+        string js();
+    }
+
+    public class editableItem
+    {
+        public string id;
+        public string name;
+        public string type;
+        public string classes;
+        public string content;
     }
 }

@@ -2,9 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8">
-    <title></title>
+    <title><%= core.css.appTitle() %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -12,17 +11,16 @@
     <link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href="assets/css/style.css" rel="stylesheet">
-    <script src="assets/js/main.js"></script>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
+<!-- LOADER --> 
+    <div id="loaderLayer"><span>Loading...</span></div>
+<!-- /LOADER -->
 
-
-
-
+<form id="form1" runat="server">
   <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid top-banner">
@@ -31,7 +29,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Project name</a>
+          <a class="brand" href="/edit/"><%= core.css.appName() %></a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
               Logged in as <a href="#" class="navbar-link">Username</a>
@@ -47,30 +45,17 @@
           <div class="sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Sidebar</li>
-              <li class="active"><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li class="nav-header">Sidebar</li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li class="nav-header">Sidebar</li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
+              <li class="active"><a href="content.aspx">Contents</a></li>
+              <li><a href="#">Options</a></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
 
         <div class="span11 main-content">
+            <asp:Literal ID="userMessage" runat="server"></asp:Literal>
 
-
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
 
         </div><!--/span-->
       </div><!--/row-->
@@ -78,14 +63,15 @@
       <hr>
 
       <footer>
-        <p>&copy; Company 2013</p>
+        <p><%= core.css.appCopy() %></p>
       </footer>
 
     </div><!--/.fluid-container-->
 
     </form>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <asp:Literal ID="js" runat="server"></asp:Literal>
 </body>
 </html>

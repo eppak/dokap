@@ -19,17 +19,23 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using core;
 
-namespace dokap.edit
+namespace core
 {
-    public partial class Default : core.page
+    public class utils
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
+        public static void echo(string data, bool comment = true)
+        { 
+            if (comment)
+                { HttpContext.Current.Response.Write("<!-- [" + data + "] -->"); } 
+            else
+                { HttpContext.Current.Response.Write(data); }
         }
+
+        public static string fixSlash(string dir)
+        {
+            return (dir.EndsWith("/")) ? dir : dir + "/";
+        }
+
     }
 }

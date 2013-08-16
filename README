@@ -8,6 +8,8 @@ THIRD PARTY LIBRARIES
 - Bootstrap, https://github.com/twbs/bootstrap (Apache 2)
 - HTML Agility Pack, http://htmlagilitypack.codeplex.com/ (Ms-PL)
 - C# FTP Library, http://ftplib.codeplex.com/ (MIT)
+- Tiny MCE, http://www.tinymce.com/ (LGPL)
+- Ace Editor, http://ace.c9.io/ (BSD)
 
 LICENSE
 The MIT License (MIT)

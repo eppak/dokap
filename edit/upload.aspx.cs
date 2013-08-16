@@ -21,15 +21,44 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
 using core;
 
 namespace dokap.edit
 {
-    public partial class Default : core.page
+    public partial class upload : core.page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btnCreate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnUpload_Click(object sender, EventArgs e)
+        {
+            loadConfig();
+            checkSecutiry();
+
+            try
+            {
+                if (!uploaded.HasFile) { throw new Exception("No file selected"); }
+                if (uploaded.PostedFile.ContentLength / 1024 > config.UPLOAD_MaxSize) { throw new Exception("Invalid file size"); }
+                if (!config.UPLOAD_Extensions.Contains((new FileInfo(uploaded.PostedFile.FileName)).Extension.ToLower())) { throw new Exception("Invalid file extension"); };
+
+                uploaded.SaveAs(config.appTmp + uploaded.PostedFile.FileName);
+                ftp.putFile(currentDir() + uploaded.PostedFile.FileName, config.appTmp + uploaded.PostedFile.FileName);
+
+                userMessage("File [" + uploaded.PostedFile.FileName + "] uploaded.");
+                File.Delete(config.appTmp + uploaded.PostedFile.FileName);
+            }
+            catch (Exception ex) 
+            {
+                userMessage("Error: " + ex.Message);            
+            }
         }
     }
 }

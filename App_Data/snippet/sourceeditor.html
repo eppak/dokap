@@ -1,0 +1,13 @@
+﻿
+
+<script type="text/javascript" src="assets/ace/ace.js"></script>
+<script type="text/javascript">
+    var editor = ace.edit("source_editor");
+    editor.setTheme("ace/theme/twilight");
+    editor.getSession().setMode("ace/mode/{%SOURCE_TYPE%}");
+    editor.resize();
+    $("#source_value").val(editor.getSession().getValue());
+    editor.getSession().on('change', function () {
+        $("#source_value").val(editor.getSession().getValue());
+    });
+</script>

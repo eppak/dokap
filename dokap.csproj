@@ -63,7 +63,265 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\config.xml" />
+    <Content Include="App_Data\config.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\config_setup.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\snippet\sourceeditor.html" />
+    <Content Include="App_Data\snippet\htmleditor.html" />
+    <Content Include="App_Data\templates\file_demo01.html" />
+    <Content Include="edit\assets\ace\ace.js" />
+    <Content Include="edit\assets\ace\ext-elastic_tabstops_lite.js" />
+    <Content Include="edit\assets\ace\ext-emmet.js" />
+    <Content Include="edit\assets\ace\ext-keybinding_menu.js" />
+    <Content Include="edit\assets\ace\ext-language_tools.js" />
+    <Content Include="edit\assets\ace\ext-modelist.js" />
+    <Content Include="edit\assets\ace\ext-options.js" />
+    <Content Include="edit\assets\ace\ext-searchbox.js" />
+    <Content Include="edit\assets\ace\ext-settings_menu.js" />
+    <Content Include="edit\assets\ace\ext-spellcheck.js" />
+    <Content Include="edit\assets\ace\ext-split.js" />
+    <Content Include="edit\assets\ace\ext-static_highlight.js" />
+    <Content Include="edit\assets\ace\ext-statusbar.js" />
+    <Content Include="edit\assets\ace\ext-textarea.js" />
+    <Content Include="edit\assets\ace\ext-themelist.js" />
+    <Content Include="edit\assets\ace\ext-whitespace.js" />
+    <Content Include="edit\assets\ace\keybinding-emacs.js" />
+    <Content Include="edit\assets\ace\keybinding-vim.js" />
+    <Content Include="edit\assets\ace\mode-abap.js" />
+    <Content Include="edit\assets\ace\mode-actionscript.js" />
+    <Content Include="edit\assets\ace\mode-ada.js" />
+    <Content Include="edit\assets\ace\mode-asciidoc.js" />
+    <Content Include="edit\assets\ace\mode-assembly_x86.js" />
+    <Content Include="edit\assets\ace\mode-autohotkey.js" />
+    <Content Include="edit\assets\ace\mode-batchfile.js" />
+    <Content Include="edit\assets\ace\mode-c9search.js" />
+    <Content Include="edit\assets\ace\mode-clojure.js" />
+    <Content Include="edit\assets\ace\mode-cobol.js" />
+    <Content Include="edit\assets\ace\mode-coffee.js" />
+    <Content Include="edit\assets\ace\mode-coldfusion.js" />
+    <Content Include="edit\assets\ace\mode-csharp.js" />
+    <Content Include="edit\assets\ace\mode-css.js" />
+    <Content Include="edit\assets\ace\mode-curly.js" />
+    <Content Include="edit\assets\ace\mode-c_cpp.js" />
+    <Content Include="edit\assets\ace\mode-d.js" />
+    <Content Include="edit\assets\ace\mode-dart.js" />
+    <Content Include="edit\assets\ace\mode-diff.js" />
+    <Content Include="edit\assets\ace\mode-django.js" />
+    <Content Include="edit\assets\ace\mode-dot.js" />
+    <Content Include="edit\assets\ace\mode-ejs.js" />
+    <Content Include="edit\assets\ace\mode-erlang.js" />
+    <Content Include="edit\assets\ace\mode-forth.js" />
+    <Content Include="edit\assets\ace\mode-ftl.js" />
+    <Content Include="edit\assets\ace\mode-glsl.js" />
+    <Content Include="edit\assets\ace\mode-golang.js" />
+    <Content Include="edit\assets\ace\mode-groovy.js" />
+    <Content Include="edit\assets\ace\mode-haml.js" />
+    <Content Include="edit\assets\ace\mode-haskell.js" />
+    <Content Include="edit\assets\ace\mode-haxe.js" />
+    <Content Include="edit\assets\ace\mode-html.js" />
+    <Content Include="edit\assets\ace\mode-html_ruby.js" />
+    <Content Include="edit\assets\ace\mode-ini.js" />
+    <Content Include="edit\assets\ace\mode-jade.js" />
+    <Content Include="edit\assets\ace\mode-java.js" />
+    <Content Include="edit\assets\ace\mode-javascript.js" />
+    <Content Include="edit\assets\ace\mode-json.js" />
+    <Content Include="edit\assets\ace\mode-jsoniq.js" />
+    <Content Include="edit\assets\ace\mode-jsp.js" />
+    <Content Include="edit\assets\ace\mode-jsx.js" />
+    <Content Include="edit\assets\ace\mode-julia.js" />
+    <Content Include="edit\assets\ace\mode-latex.js" />
+    <Content Include="edit\assets\ace\mode-less.js" />
+    <Content Include="edit\assets\ace\mode-liquid.js" />
+    <Content Include="edit\assets\ace\mode-lisp.js" />
+    <Content Include="edit\assets\ace\mode-livescript.js" />
+    <Content Include="edit\assets\ace\mode-logiql.js" />
+    <Content Include="edit\assets\ace\mode-lsl.js" />
+    <Content Include="edit\assets\ace\mode-lua.js" />
+    <Content Include="edit\assets\ace\mode-luapage.js" />
+    <Content Include="edit\assets\ace\mode-lucene.js" />
+    <Content Include="edit\assets\ace\mode-makefile.js" />
+    <Content Include="edit\assets\ace\mode-markdown.js" />
+    <Content Include="edit\assets\ace\mode-matlab.js" />
+    <Content Include="edit\assets\ace\mode-mushcode.js" />
+    <Content Include="edit\assets\ace\mode-mushcode_high_rules.js" />
+    <Content Include="edit\assets\ace\mode-mysql.js" />
+    <Content Include="edit\assets\ace\mode-objectivec.js" />
+    <Content Include="edit\assets\ace\mode-ocaml.js" />
+    <Content Include="edit\assets\ace\mode-pascal.js" />
+    <Content Include="edit\assets\ace\mode-perl.js" />
+    <Content Include="edit\assets\ace\mode-pgsql.js" />
+    <Content Include="edit\assets\ace\mode-php.js" />
+    <Content Include="edit\assets\ace\mode-plain_text.js" />
+    <Content Include="edit\assets\ace\mode-powershell.js" />
+    <Content Include="edit\assets\ace\mode-prolog.js" />
+    <Content Include="edit\assets\ace\mode-properties.js" />
+    <Content Include="edit\assets\ace\mode-python.js" />
+    <Content Include="edit\assets\ace\mode-r.js" />
+    <Content Include="edit\assets\ace\mode-rdoc.js" />
+    <Content Include="edit\assets\ace\mode-rhtml.js" />
+    <Content Include="edit\assets\ace\mode-ruby.js" />
+    <Content Include="edit\assets\ace\mode-rust.js" />
+    <Content Include="edit\assets\ace\mode-sass.js" />
+    <Content Include="edit\assets\ace\mode-scad.js" />
+    <Content Include="edit\assets\ace\mode-scala.js" />
+    <Content Include="edit\assets\ace\mode-scheme.js" />
+    <Content Include="edit\assets\ace\mode-scss.js" />
+    <Content Include="edit\assets\ace\mode-sh.js" />
+    <Content Include="edit\assets\ace\mode-snippets.js" />
+    <Content Include="edit\assets\ace\mode-sql.js" />
+    <Content Include="edit\assets\ace\mode-stylus.js" />
+    <Content Include="edit\assets\ace\mode-svg.js" />
+    <Content Include="edit\assets\ace\mode-tcl.js" />
+    <Content Include="edit\assets\ace\mode-tex.js" />
+    <Content Include="edit\assets\ace\mode-text.js" />
+    <Content Include="edit\assets\ace\mode-textile.js" />
+    <Content Include="edit\assets\ace\mode-tmsnippet.js" />
+    <Content Include="edit\assets\ace\mode-toml.js" />
+    <Content Include="edit\assets\ace\mode-twig.js" />
+    <Content Include="edit\assets\ace\mode-typescript.js" />
+    <Content Include="edit\assets\ace\mode-vbscript.js" />
+    <Content Include="edit\assets\ace\mode-velocity.js" />
+    <Content Include="edit\assets\ace\mode-verilog.js" />
+    <Content Include="edit\assets\ace\mode-xml.js" />
+    <Content Include="edit\assets\ace\mode-xquery.js" />
+    <Content Include="edit\assets\ace\mode-yaml.js" />
+    <Content Include="edit\assets\ace\snippets\abap.js" />
+    <Content Include="edit\assets\ace\snippets\actionscript.js" />
+    <Content Include="edit\assets\ace\snippets\ada.js" />
+    <Content Include="edit\assets\ace\snippets\asciidoc.js" />
+    <Content Include="edit\assets\ace\snippets\assembly_x86.js" />
+    <Content Include="edit\assets\ace\snippets\autohotkey.js" />
+    <Content Include="edit\assets\ace\snippets\batchfile.js" />
+    <Content Include="edit\assets\ace\snippets\c9search.js" />
+    <Content Include="edit\assets\ace\snippets\clojure.js" />
+    <Content Include="edit\assets\ace\snippets\cobol.js" />
+    <Content Include="edit\assets\ace\snippets\coffee.js" />
+    <Content Include="edit\assets\ace\snippets\coldfusion.js" />
+    <Content Include="edit\assets\ace\snippets\csharp.js" />
+    <Content Include="edit\assets\ace\snippets\css.js" />
+    <Content Include="edit\assets\ace\snippets\curly.js" />
+    <Content Include="edit\assets\ace\snippets\c_cpp.js" />
+    <Content Include="edit\assets\ace\snippets\d.js" />
+    <Content Include="edit\assets\ace\snippets\dart.js" />
+    <Content Include="edit\assets\ace\snippets\diff.js" />
+    <Content Include="edit\assets\ace\snippets\django.js" />
+    <Content Include="edit\assets\ace\snippets\dot.js" />
+    <Content Include="edit\assets\ace\snippets\ejs.js" />
+    <Content Include="edit\assets\ace\snippets\erlang.js" />
+    <Content Include="edit\assets\ace\snippets\forth.js" />
+    <Content Include="edit\assets\ace\snippets\ftl.js" />
+    <Content Include="edit\assets\ace\snippets\glsl.js" />
+    <Content Include="edit\assets\ace\snippets\golang.js" />
+    <Content Include="edit\assets\ace\snippets\groovy.js" />
+    <Content Include="edit\assets\ace\snippets\haml.js" />
+    <Content Include="edit\assets\ace\snippets\haskell.js" />
+    <Content Include="edit\assets\ace\snippets\haxe.js" />
+    <Content Include="edit\assets\ace\snippets\html.js" />
+    <Content Include="edit\assets\ace\snippets\html_ruby.js" />
+    <Content Include="edit\assets\ace\snippets\ini.js" />
+    <Content Include="edit\assets\ace\snippets\jade.js" />
+    <Content Include="edit\assets\ace\snippets\java.js" />
+    <Content Include="edit\assets\ace\snippets\javascript.js" />
+    <Content Include="edit\assets\ace\snippets\json.js" />
+    <Content Include="edit\assets\ace\snippets\jsoniq.js" />
+    <Content Include="edit\assets\ace\snippets\jsp.js" />
+    <Content Include="edit\assets\ace\snippets\jsx.js" />
+    <Content Include="edit\assets\ace\snippets\julia.js" />
+    <Content Include="edit\assets\ace\snippets\latex.js" />
+    <Content Include="edit\assets\ace\snippets\less.js" />
+    <Content Include="edit\assets\ace\snippets\liquid.js" />
+    <Content Include="edit\assets\ace\snippets\lisp.js" />
+    <Content Include="edit\assets\ace\snippets\livescript.js" />
+    <Content Include="edit\assets\ace\snippets\logiql.js" />
+    <Content Include="edit\assets\ace\snippets\lsl.js" />
+    <Content Include="edit\assets\ace\snippets\lua.js" />
+    <Content Include="edit\assets\ace\snippets\luapage.js" />
+    <Content Include="edit\assets\ace\snippets\lucene.js" />
+    <Content Include="edit\assets\ace\snippets\makefile.js" />
+    <Content Include="edit\assets\ace\snippets\markdown.js" />
+    <Content Include="edit\assets\ace\snippets\matlab.js" />
+    <Content Include="edit\assets\ace\snippets\mushcode.js" />
+    <Content Include="edit\assets\ace\snippets\mushcode_high_rules.js" />
+    <Content Include="edit\assets\ace\snippets\mysql.js" />
+    <Content Include="edit\assets\ace\snippets\objectivec.js" />
+    <Content Include="edit\assets\ace\snippets\ocaml.js" />
+    <Content Include="edit\assets\ace\snippets\pascal.js" />
+    <Content Include="edit\assets\ace\snippets\perl.js" />
+    <Content Include="edit\assets\ace\snippets\pgsql.js" />
+    <Content Include="edit\assets\ace\snippets\php.js" />
+    <Content Include="edit\assets\ace\snippets\plain_text.js" />
+    <Content Include="edit\assets\ace\snippets\powershell.js" />
+    <Content Include="edit\assets\ace\snippets\prolog.js" />
+    <Content Include="edit\assets\ace\snippets\properties.js" />
+    <Content Include="edit\assets\ace\snippets\python.js" />
+    <Content Include="edit\assets\ace\snippets\r.js" />
+    <Content Include="edit\assets\ace\snippets\rdoc.js" />
+    <Content Include="edit\assets\ace\snippets\rhtml.js" />
+    <Content Include="edit\assets\ace\snippets\ruby.js" />
+    <Content Include="edit\assets\ace\snippets\rust.js" />
+    <Content Include="edit\assets\ace\snippets\sass.js" />
+    <Content Include="edit\assets\ace\snippets\scad.js" />
+    <Content Include="edit\assets\ace\snippets\scala.js" />
+    <Content Include="edit\assets\ace\snippets\scheme.js" />
+    <Content Include="edit\assets\ace\snippets\scss.js" />
+    <Content Include="edit\assets\ace\snippets\sh.js" />
+    <Content Include="edit\assets\ace\snippets\snippets.js" />
+    <Content Include="edit\assets\ace\snippets\sql.js" />
+    <Content Include="edit\assets\ace\snippets\stylus.js" />
+    <Content Include="edit\assets\ace\snippets\svg.js" />
+    <Content Include="edit\assets\ace\snippets\tcl.js" />
+    <Content Include="edit\assets\ace\snippets\tex.js" />
+    <Content Include="edit\assets\ace\snippets\text.js" />
+    <Content Include="edit\assets\ace\snippets\textile.js" />
+    <Content Include="edit\assets\ace\snippets\toml.js" />
+    <Content Include="edit\assets\ace\snippets\twig.js" />
+    <Content Include="edit\assets\ace\snippets\typescript.js" />
+    <Content Include="edit\assets\ace\snippets\vbscript.js" />
+    <Content Include="edit\assets\ace\snippets\velocity.js" />
+    <Content Include="edit\assets\ace\snippets\verilog.js" />
+    <Content Include="edit\assets\ace\snippets\xml.js" />
+    <Content Include="edit\assets\ace\snippets\xquery.js" />
+    <Content Include="edit\assets\ace\snippets\yaml.js" />
+    <Content Include="edit\assets\ace\theme-ambiance.js" />
+    <Content Include="edit\assets\ace\theme-chaos.js" />
+    <Content Include="edit\assets\ace\theme-chrome.js" />
+    <Content Include="edit\assets\ace\theme-clouds.js" />
+    <Content Include="edit\assets\ace\theme-clouds_midnight.js" />
+    <Content Include="edit\assets\ace\theme-cobalt.js" />
+    <Content Include="edit\assets\ace\theme-crimson_editor.js" />
+    <Content Include="edit\assets\ace\theme-dawn.js" />
+    <Content Include="edit\assets\ace\theme-dreamweaver.js" />
+    <Content Include="edit\assets\ace\theme-eclipse.js" />
+    <Content Include="edit\assets\ace\theme-github.js" />
+    <Content Include="edit\assets\ace\theme-idle_fingers.js" />
+    <Content Include="edit\assets\ace\theme-kr.js" />
+    <Content Include="edit\assets\ace\theme-merbivore.js" />
+    <Content Include="edit\assets\ace\theme-merbivore_soft.js" />
+    <Content Include="edit\assets\ace\theme-monokai.js" />
+    <Content Include="edit\assets\ace\theme-mono_industrial.js" />
+    <Content Include="edit\assets\ace\theme-pastel_on_dark.js" />
+    <Content Include="edit\assets\ace\theme-solarized_dark.js" />
+    <Content Include="edit\assets\ace\theme-solarized_light.js" />
+    <Content Include="edit\assets\ace\theme-terminal.js" />
+    <Content Include="edit\assets\ace\theme-textmate.js" />
+    <Content Include="edit\assets\ace\theme-tomorrow.js" />
+    <Content Include="edit\assets\ace\theme-tomorrow_night.js" />
+    <Content Include="edit\assets\ace\theme-tomorrow_night_blue.js" />
+    <Content Include="edit\assets\ace\theme-tomorrow_night_bright.js" />
+    <Content Include="edit\assets\ace\theme-tomorrow_night_eighties.js" />
+    <Content Include="edit\assets\ace\theme-twilight.js" />
+    <Content Include="edit\assets\ace\theme-vibrant_ink.js" />
+    <Content Include="edit\assets\ace\theme-xcode.js" />
+    <Content Include="edit\assets\ace\worker-coffee.js" />
+    <Content Include="edit\assets\ace\worker-css.js" />
+    <Content Include="edit\assets\ace\worker-javascript.js" />
+    <Content Include="edit\assets\ace\worker-json.js" />
+    <Content Include="edit\assets\ace\worker-lua.js" />
+    <Content Include="edit\assets\ace\worker-php.js" />
+    <Content Include="edit\assets\ace\worker-xquery.js" />
     <Content Include="edit\assets\css\bootstrap-glyphicons.css" />
     <Content Include="edit\assets\css\bootstrap-responsive.css" />
     <Content Include="edit\assets\css\bootstrap-responsive.min.css" />
@@ -76,8 +334,87 @@
     <Content Include="edit\assets\js\bootstrap.js" />
     <Content Include="edit\assets\js\bootstrap.min.js" />
     <Content Include="edit\assets\js\main.js" />
+    <Content Include="edit\assets\tinymce\license.txt" />
+    <Content Include="edit\assets\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\compat3x\editable_selects.js" />
+    <Content Include="edit\assets\tinymce\plugins\compat3x\form_utils.js" />
+    <Content Include="edit\assets\tinymce\plugins\compat3x\mctabs.js" />
+    <Content Include="edit\assets\tinymce\plugins\compat3x\tiny_mce_popup.js" />
+    <Content Include="edit\assets\tinymce\plugins\compat3x\validate.js" />
+    <Content Include="edit\assets\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="edit\assets\tinymce\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="edit\assets\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="edit\assets\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="edit\assets\tinymce\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="edit\assets\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="edit\assets\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="edit\assets\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="edit\assets\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="edit\assets\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="edit\assets\tinymce\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="edit\assets\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="edit\assets\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="edit\assets\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="edit\assets\tinymce\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="edit\assets\tinymce\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="edit\assets\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\example\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\example_dependency\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\layer\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\media\moxieplayer.swf" />
+    <Content Include="edit\assets\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="edit\assets\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="edit\assets\tinymce\skins\lightgray\content.inline.min.css" />
+    <Content Include="edit\assets\tinymce\skins\lightgray\content.min.css" />
+    <Content Include="edit\assets\tinymce\skins\lightgray\fonts\icomoon-small.svg" />
+    <Content Include="edit\assets\tinymce\skins\lightgray\fonts\icomoon.svg" />
+    <Content Include="edit\assets\tinymce\skins\lightgray\img\anchor.gif" />
+    <Content Include="edit\assets\tinymce\skins\lightgray\img\loader.gif" />
+    <Content Include="edit\assets\tinymce\skins\lightgray\img\object.gif" />
+    <Content Include="edit\assets\tinymce\skins\lightgray\img\trans.gif" />
+    <Content Include="edit\assets\tinymce\skins\lightgray\img\wline.gif" />
+    <Content Include="edit\assets\tinymce\skins\lightgray\skin.ie7.min.css" />
+    <Content Include="edit\assets\tinymce\skins\lightgray\skin.min.css" />
+    <Content Include="edit\assets\tinymce\themes\modern\theme.min.js" />
+    <Content Include="edit\assets\tinymce\tinymce.min.js" />
     <Content Include="edit\content.aspx" />
+    <Content Include="edit\create.aspx" />
     <Content Include="edit\Default.aspx" />
+    <Content Include="edit\modify.aspx" />
+    <Content Include="edit\upload.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -88,9 +425,26 @@
     <Compile Include="edit\content.aspx.designer.cs">
       <DependentUpon>content.aspx</DependentUpon>
     </Compile>
-    <Compile Include="edit\core\config.cs" />
-    <Compile Include="edit\core\ftp.cs" />
-    <Compile Include="edit\core\security.cs" />
+    <Compile Include="edit\src\core\config.cs" />
+    <Compile Include="edit\src\core\logs.cs" />
+    <Compile Include="edit\src\css.cs" />
+    <Compile Include="edit\src\editors\editor.cs" />
+    <Compile Include="edit\src\core\ftp.cs" />
+    <Compile Include="edit\src\editors\htmleditor.cs" />
+    <Compile Include="edit\src\editors\htmlparser.cs" />
+    <Compile Include="edit\src\core\page.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="edit\src\core\security.cs" />
+    <Compile Include="edit\src\editors\sourceeditor.cs" />
+    <Compile Include="edit\src\utils.cs" />
+    <Compile Include="edit\create.aspx.cs">
+      <DependentUpon>create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="edit\create.aspx.designer.cs">
+      <DependentUpon>create.aspx</DependentUpon>
+    </Compile>
     <Compile Include="edit\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -105,6 +459,20 @@
     <Compile Include="edit\edit.Master.designer.cs">
       <DependentUpon>edit.Master</DependentUpon>
     </Compile>
+    <Compile Include="edit\modify.aspx.cs">
+      <DependentUpon>modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="edit\modify.aspx.designer.cs">
+      <DependentUpon>modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="edit\upload.aspx.cs">
+      <DependentUpon>upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="edit\upload.aspx.designer.cs">
+      <DependentUpon>upload.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -113,6 +481,14 @@
     <Content Include="edit\assets\fonts\glyphiconshalflings-regular.otf" />
     <Content Include="edit\assets\fonts\glyphiconshalflings-regular.ttf" />
     <Content Include="edit\assets\fonts\glyphiconshalflings-regular.woff" />
+    <Content Include="edit\assets\tinymce\langs\readme.md" />
+    <Content Include="edit\assets\tinymce\skins\lightgray\fonts\icomoon-small.eot" />
+    <Content Include="edit\assets\tinymce\skins\lightgray\fonts\icomoon-small.ttf" />
+    <Content Include="edit\assets\tinymce\skins\lightgray\fonts\icomoon-small.woff" />
+    <Content Include="edit\assets\tinymce\skins\lightgray\fonts\icomoon.eot" />
+    <Content Include="edit\assets\tinymce\skins\lightgray\fonts\icomoon.ttf" />
+    <Content Include="edit\assets\tinymce\skins\lightgray\fonts\icomoon.woff" />
+    <Content Include="edit\assets\tinymce\skins\lightgray\fonts\readme.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -121,6 +497,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\logs\" />
     <Folder Include="App_Data\tmp\" />
   </ItemGroup>
   <PropertyGroup>

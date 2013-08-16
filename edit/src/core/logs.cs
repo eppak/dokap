@@ -19,17 +19,23 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.IO;
 using core;
 
-namespace dokap.edit
+namespace core
 {
-    public partial class Default : core.page
+    public class logs
     {
-        protected void Page_Load(object sender, EventArgs e)
+        private static string timeStamp() 
         {
+            return DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString().PadLeft(2, '0') + DateTime.Now.Day.ToString().PadLeft(2, '0');
+        }
 
+        public static void write(string data) 
+        {
+            StreamWriter sr = new StreamWriter(config.appLogs + timeStamp() + "_debug.log");
+            sr.WriteLine(data);
+            sr.Close();
         }
     }
 }

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Config>
+  <admin username="{ADMIN_USERNAME}" password="{ADMIN_PASSWOD}">
+    <item type="directory" mode="exclude">/cloud/</item>
+    <item type="extension" mode="exclude">*</item>
+    <item type="extension" mode="include">.html</item>
+    <item type="extension" mode="include">.htm</item>
+    <item type="extension" mode="include">.php</item>
+    <item type="extension" mode="include">.asp</item>
+    <item type="extension" mode="include">.css</item>
+    <item type="extension" mode="include">.js</item>
+  </admin>
+
+  <user username="{USERNAME}" password="{PASSWORD}"/>
+    <item type="directory" mode="exclude">/cloud/</item>
+    <item type="extension" mode="exclude">*</item>
+    <item type="extension" mode="include">.html</item>
+    <item type="extension" mode="include">.htm</item>
+  </user>  
+
+  <security salt="{SALT}" loops="2"/>
+  <upload maxsize="2048" extensions=".png|.jpg|.gif" />
+  <ftp server="{FTP_SERVER}" username="{FTP_USERNAME}" password="{FTP_PASSWORD}" root="{ROOT}" images="{IMAGE_ROOT}" site="{URL}"/>
+</Config>

@@ -10,24 +10,24 @@
 namespace dokap.edit {
     
     
-    public partial class Default {
+    public partial class upload {
         
         /// <summary>
-        /// Controllo Head1.
+        /// Controllo uploaded.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
+        protected global::System.Web.UI.WebControls.FileUpload uploaded;
         
         /// <summary>
-        /// Controllo form1.
+        /// Controllo btnUpload.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.LinkButton btnUpload;
     }
 }

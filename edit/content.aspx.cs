@@ -1,4 +1,21 @@
-﻿using System;
+﻿/*
+doKap Copyright (c) 2013 Alessandro Cappellozza (alessandro.cappellozza@gmail.com)
+
+The MIT License (MIT)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+documentation files (the "Software"), to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software,
+and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of
+the Software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
+NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,  WHETHER IN
+AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+OR OTHER DEALINGS IN THE SOFTWARE.*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,53 +25,25 @@ using core;
 
 namespace dokap.edit
 {
-    public partial class content : System.Web.UI.Page
+    public partial class content : core.page
     {
-
-
-        private string fixSlash(string dir) {
-            return (dir.EndsWith("/")) ? dir : dir + "/";
-        }
-
-        protected string currentDir() {
-            if (Request.QueryString["d"] != null)
-            {
-
-                return fixSlash(Request.QueryString["d"]);
-            }
-            else
-            {
-                return "/";
-            }
-        }
-
-        protected string backDir(){
-           string Res = "";
-           for (int i = 1; i < currentDir().Split('/').Length - 2; i++) 
-            {
-                Res += "/" + currentDir().Split('/')[i];
-            }
-           return Res + "/";
-        }
-
 
         protected void Page_Load(object sender, EventArgs e)
         {
             string Res = "";
-
             try
             {
-                if (!IsPostBack || !config.loaded) { config.load(); }
-                if (currentDir() != "/" && Request.QueryString["s"] != security.sha1SumLoop(currentDir())) { throw new Exception("Security error."); }
+                loadConfig();
+                checkSecutiry(false);
 
                 List<core.fsItem> itemsList = core.ftp.dir(currentDir());
-                Res += makeItem("content.aspx?d=" + backDir() + "&s=" + security.sha1SumLoop(backDir()), "", "glyphicon-chevron-left");
+                Res += css.browserItem("content.aspx?d=" + backDir() + "&s=" + security.sha1SumLoop(backDir()), "", "glyphicon-chevron-left");
 
                 foreach (core.fsItem i in itemsList)
                 {
                     if (i.isDirectory)
                     {
-                        Res += makeItem("content.aspx?d=" + currentDir() + i.Name + "/&s=" + security.sha1SumLoop(currentDir() + i.Name + "/"), i.Name, "glyphicon-folder-open");
+                        Res += css.browserItem("content.aspx?d=" + currentDir() + i.Name + "/&s=" + security.sha1SumLoop(currentDir() + i.Name + "/"), i.Name, "glyphicon-folder-open");
                     }
 
                 }
@@ -63,20 +52,16 @@ namespace dokap.edit
                 {
                     if (!i.isDirectory)
                     {
-                        Res += makeItem("edit.aspx?f=" + currentDir() + i.Name + "&s=" + security.sha1sum(currentDir() + i.Name), i.Name, "glyphicon-list-alt");
+                        string link = (i.editable) ? "modify.aspx?d=" + currentDir() + i.Name + "&s=" + security.sha1SumLoop(currentDir() + i.Name) : "#";
+                        Res += css.browserItem(link, i.Name, "glyphicon-list-alt");
                     }
-
                 }
             }
             catch (Exception ex) {
-                Res = ex.Message;
+                Res = css.userMessageKO(ex.Message);
             }
 
             Items.Text = Res;            
-        }
-
-        protected string makeItem(string link, string name, string icon) {
-            return "<a href=\"" + link + "\" class=\"item\"><span class=\"glyphicon " + icon + "\"></span>" + name + "</a>";
         }
     }
 }

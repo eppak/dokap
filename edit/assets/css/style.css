@@ -1,6 +1,10 @@
 ﻿body { padding-top: 41px; padding-bottom: 40px; background-color: rgb(247, 247, 247); font-family: 'Open Sans', sans-serif;}
 @media (max-width: 980px) {.navbar-text.pull-right { float: none; padding-left: 5px; padding-right: 5px; } }
 
+#loaderLayer {display: none; width: 100%; position: fixed; top:0; left: 0; background-color: #fff; z-index: 15000; padding: 20px; padding-top: 0; text-align: center; filter: alpha(opacity=75); -moz-opacity: .75; opacity: .75;}
+#loaderLayer span { border: 1px solid rgb(218, 227, 233); display: block; padding: 5px; width: 300px; margin: 0 auto; text-align: center;  border-top: 0; background-color: rgb(51, 69, 90); border-radius: 5px; -moz-border-radius: 5px; color: #fff;
+                    border-top-left-radius: 0; border-top-right-radius: 0; -moz-border-top-left-radius: 0; -moz-border-top-right-radius: 0;}
+
 .sidebar-nav { padding: 9px 0; }
 .top-banner {background-color:  rgb(44, 55, 66) !important;}
 .main-content { padding: 20px; margin-left: 10px !important; background-color: #fff; min-height: 640px !important; border-bottom: 1px solid rgb(218, 227, 233);  border-left: 1px solid rgb(218, 227, 233); border-right: 1px solid rgb(218, 227, 233); border-radius: 0 0 5px 5px; -moz-border-radius: 0 0 5px 5px;}
@@ -13,3 +17,7 @@ background-color: rgb(51, 69, 90); border-radius: 3px; -moz-border-radius: 3px;}
 .item { background-color: rgb(247, 247, 247); width: 100px; height: 100px; float: left; text-transform: uppercase;  margin-right: 10px; margin-bottom: 10px; border: 1px solid rgb(218, 227, 233); border-radius: 5px; -moz-border-radius: 5px; padding: 5px; text-align: center; overflow: hidden; white-space: nowrap; font-weight: 300; font-size: 12px; text-overflow: ellipsis; }
 .item:hover {box-shadow: 0px 0px 5px silver; text-decoration: none;}
 .item span {font-size: 18px; display: block;}
+
+.brand { font-weight: 300 !important;  }
+.brand span{ font-size: 12px;  color: #fff; }
+.brand:hover { color: #999 !important;}

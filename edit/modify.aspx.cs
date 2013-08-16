@@ -21,15 +21,50 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
 using core;
+using editors;
 
 namespace dokap.edit
 {
-    public partial class Default : core.page
+    public partial class modify : core.page
     {
+        protected int mode() {
+            return Convert.ToInt16(Request.QueryString["m"]);
+        }
+
+        protected object editor() {
+            if (mode() == 0)
+                { return new htmleditor(currentFile(), Request.QueryString["s"]); }
+                else
+            { return new sourceeditor(currentFile(), Request.QueryString["s"]); }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                try
+                {
+                    loadConfig();
+                    checkSecutiry(false);
+                    editableItems.Text = ((IEditor)editor()).render(true);
+                    js(((IEditor)editor()).js());
+                }
+                catch (Exception ex) { userMessage(ex.Message, true); }
+            }
+        }
 
+        protected void btnCreate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                loadConfig();
+                checkSecutiry(false);
+                editableItems.Text = ((IEditor)editor()).save(Request);
+                js(((IEditor)editor()).js());
+            }
+            catch (Exception ex) { userMessage(ex.Message, true); }
         }
     }
 }

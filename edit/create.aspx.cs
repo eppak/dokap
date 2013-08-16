@@ -21,15 +21,44 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
 using core;
 
 namespace dokap.edit
 {
-    public partial class Default : core.page
+    public partial class create : core.page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            loadConfig();
+            checkSecutiry();
 
+            if (!IsPostBack) {
+                foreach (string f in config.fileTemplates()) 
+                {
+                    extensions.Items.Add(f.Replace("file_", ""));
+                }
+            }
+        }
+
+        protected void btnCreate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Name.Text == "") { throw new Exception("Invalid name"); }
+                if (Request.QueryString["t"] == "1")
+                {
+                    string fileName = config.appTempaltes + "file_" + extensions.SelectedValue;
+                    ftp.createFile(currentDir(), fileName, Name.Text + (new FileInfo(fileName)).Extension);
+                }
+                else
+                {
+                    ftp.createDir(currentDir(), Name.Text);
+                }
+
+                Response.Redirect(backDirLink());
+            }
+            catch (Exception ex) { userMessage(ex.Message, true); }
         }
     }
 }

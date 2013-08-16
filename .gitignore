@@ -178,4 +178,7 @@ pip-log.txt
 */*/*/bootstrap-glyphicons.css
 edit/assets/fonts/*
 edit/assets/tinymce/*
+edit/assets/ace/*
+App_Data/tmp/*
+App_Data/logs/*
 App_Data/config.xml
