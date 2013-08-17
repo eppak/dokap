@@ -33,7 +33,12 @@ namespace core
         public const string STR_APP_PAYOFF = "CMS";
         public const string STR_APP_COPY = "&copy; Alessandro Cappellozza";
         public const string STR_APP_VER = "0.1";
-        public const string STR_APP_BUILD = "2";
+        public const string STR_APP_BUILD = "3";
+
+        public static string ADMIN_USERNAME = "";
+        public static string ADMIN_PASSWORD = "";
+        public static string USERNAME = "";
+        public static string PASSWORD = "";
 
         public static bool loaded = false;
         public static string Security_Salt = "/";
@@ -59,6 +64,11 @@ namespace core
 
             Security_Salt = Convert.ToString(doc.SelectSingleNode("Config/security/@salt").InnerText);
             Security_Loops = Convert.ToInt16(doc.SelectSingleNode("Config/security/@loops").InnerText);
+
+            ADMIN_USERNAME = Convert.ToString(doc.SelectSingleNode("Config/admin/@username").InnerText); ;
+            ADMIN_PASSWORD = Convert.ToString(doc.SelectSingleNode("Config/admin/@password").InnerText); ;
+            USERNAME = Convert.ToString(doc.SelectSingleNode("Config/user/@username").InnerText); ;
+            PASSWORD = Convert.ToString(doc.SelectSingleNode("Config/user/@password").InnerText); ;
 
             FTP_Server = Convert.ToString(doc.SelectSingleNode("Config/ftp/@server").InnerText);
             FTP_Username = Convert.ToString(doc.SelectSingleNode("Config/ftp/@username").InnerText);
@@ -86,7 +96,7 @@ namespace core
                             break;
 
                             case "extension":
-                                ITEMS_Filter.Add("ext://" + v, t);
+                                ITEMS_Filter.Add("ext://" + v, t + ":" + n.Attributes.Item(2).Value.ToLower());
                             break;
                         }
                 }
@@ -174,6 +184,24 @@ namespace core
             }
         }
 
+        public static string editorsExt(string e)
+        {
+            if (ITEMS_Filter.ContainsKey("ext://" + e))
+            {
+                return Convert.ToString(ITEMS_Filter["ext://" + e]).Substring(2);
+            }
+            else
+            {
+                if (ITEMS_Filter.ContainsKey("ext://*"))
+                {
+                    return Convert.ToString(ITEMS_Filter["ext://*"]).Substring(2);
+                }
+                else
+                {
+                    return "";
+                }            
+            }
+        }
     }
 
     public class fsEntry

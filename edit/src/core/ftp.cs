@@ -63,7 +63,7 @@ namespace core
                     if (visibleItem(f.Name)) {
                         if (config.IncludeExt(f.Extension.ToLower()))
                         {
-                            Res.Add(new fsItem() { Name = f.Name, isDirectory = false, lastModify = Convert.ToDateTime(f.LastWriteTime), editable = true });
+                            Res.Add(new fsItem() { Name = f.Name, isDirectory = false, lastModify = Convert.ToDateTime(f.LastWriteTime), editable = true, editors = config.editorsExt(f.Extension.ToLower()) });
                         }
                     }
                 }
@@ -112,5 +112,6 @@ namespace core
         public bool isDirectory;
         public DateTime lastModify;
         public bool editable = false;
+        public string editors;
     }
 }

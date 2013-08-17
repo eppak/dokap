@@ -1,4 +1,4 @@
-﻿body { padding-top: 41px; padding-bottom: 40px; background-color: rgb(247, 247, 247); font-family: 'Open Sans', sans-serif;}
+﻿body { padding-top: 0px; padding-bottom: 40px; background-color: rgb(247, 247, 247); font-family: 'Open Sans', sans-serif;}
 @media (max-width: 980px) {.navbar-text.pull-right { float: none; padding-left: 5px; padding-right: 5px; } }
 
 #loaderLayer {display: none; width: 100%; position: fixed; top:0; left: 0; background-color: #fff; z-index: 15000; padding: 20px; padding-top: 0; text-align: center; filter: alpha(opacity=75); -moz-opacity: .75; opacity: .75;}
@@ -14,9 +14,12 @@
 background-color: rgb(51, 69, 90); border-radius: 3px; -moz-border-radius: 3px;}
 
 .items {width: 100%; float: left;}
-.item { background-color: rgb(247, 247, 247); width: 100px; height: 100px; float: left; text-transform: uppercase;  margin-right: 10px; margin-bottom: 10px; border: 1px solid rgb(218, 227, 233); border-radius: 5px; -moz-border-radius: 5px; padding: 5px; text-align: center; overflow: hidden; white-space: nowrap; font-weight: 300; font-size: 12px; text-overflow: ellipsis; }
+
+
+.item { width: 200px; height: 65px; position: relative;  border-radius: 5px; -moz-border-radius: 5px; padding: 10px; margin-right: 10px; margin-bottom: 10px; overflow: hidden; float: left; background-color: rgb(247, 247, 247);}
+.item .date { background-color: rgb(51, 69, 90); color: #fff; position: absolute; bottom: 0; left: 0; width: 100%; padding: 3px; line-height: 35px; }
+.item .icon {font-size: 24px; display: block; float: left; margin-right: 15px; color: silver; padding: 3px; padding-left: 10px;}
 .item:hover {box-shadow: 0px 0px 5px silver; text-decoration: none;}
-.item span {font-size: 18px; display: block;}
 
 .brand { font-weight: 300 !important;  }
 .brand span{ font-size: 12px;  color: #fff; }

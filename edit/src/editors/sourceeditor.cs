@@ -48,7 +48,7 @@ namespace editors
         {
             switch ((new FileInfo(_remoteFile)).Extension.ToLower())
             {
-                case ".html": case ".htm": case ".php": case ".asp":
+                case ".html": case ".htm":
                         return File.ReadAllText(config.appSnippet + "sourceeditor.html").Replace("{%SOURCE_TYPE%}", "html");
 
                 case ".css":
@@ -56,6 +56,12 @@ namespace editors
 
                 case ".js":
                     return File.ReadAllText(config.appSnippet + "sourceeditor.html").Replace("{%SOURCE_TYPE%}", "javascript");
+
+                case ".php":
+                    return File.ReadAllText(config.appSnippet + "sourceeditor.html").Replace("{%SOURCE_TYPE%}", "php");
+
+                case ".asp":
+                    return File.ReadAllText(config.appSnippet + "sourceeditor.html").Replace("{%SOURCE_TYPE%}", "vbscript");
 
                 default:
                     return File.ReadAllText(config.appSnippet + "sourceeditor.html").Replace("{%SOURCE_TYPE%}", "html");

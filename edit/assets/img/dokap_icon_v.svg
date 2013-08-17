@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="dokap_icon_v.svg"
+   inkscape:export-filename="C:\Users\Alessandro\Desktop\dokap_icon_v.png"
+   inkscape:export-xdpi="3.5186317"
+   inkscape:export-ydpi="3.5186317">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.78870185"
+     inkscape:cx="372.04724"
+     inkscape:cy="526.18109"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <path
+       style="fill:#4387bf;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
+       d="m 398.125,308.9375 0,60.09375 c 121.97937,13.33014 216.90625,117.21375 216.90625,243.375 0,135.20373 -109.02776,244.8125 -243.53125,244.8125 -67.07794,0 -127.83241,-27.27404 -171.875,-71.375 L 144.84375,817.5 c 56.23395,63.92959 138.63848,104.28125 230.46875,104.28125 169.45936,0 306.8125,-137.38439 306.8125,-306.84375 0,-161.781 -125.20298,-294.32051 -284,-306 z M 336,310.59375 C 185.09916,329.88785 68.46875,458.79315 68.46875,614.9375 c 0,55.20935 14.601765,106.9915 40.125,151.75 l 52.78125,-30.5 C 140.1523,699.86387 127.96875,657.57627 127.96875,612.40625 127.96875,489.32265 218.32312,387.46269 336,370.1875 l 0,-59.59375 z"
+       id="path2985"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       transform="matrix(-0.68604247,0,0,-0.6896141,632.10852,1036.7662)"
+       sodipodi:type="arc"
+       style="fill:#343e4b;fill-opacity:1;fill-rule:evenodd;stroke:#343e4b;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path2985-1-7"
+       sodipodi:cx="375.30026"
+       sodipodi:cy="614.93451"
+       sodipodi:rx="306.83331"
+       sodipodi:ry="306.83331"
+       d="m 682.13358,614.93451 a 306.83331,306.83331 0 1 1 -613.666631,0 306.83331,306.83331 0 1 1 613.666631,0 z" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="223.15152"
+       y="644.09637"
+       id="text3864"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3866"
+         x="223.15152"
+         y="644.09637"
+         style="font-size:110px;fill:#ffffff;fill-opacity:1">doKap</tspan></text>
+  </g>
+</svg>

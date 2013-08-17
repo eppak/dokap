@@ -47,16 +47,20 @@
     </style>
 </head>
 <body>
-    <div class="container">
 
+    <div style="width: 100%; text-align: center; margin-bottom: 20px;">
+        <img src="assets/img/dokap_icon.png" />
+    </div>
+    <div class="container">
       <form class="form-signin" id="form1" runat="server">
-        <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="text" class="input-block-level" placeholder="Email address">
-        <input type="password" class="input-block-level" placeholder="Password">
+        <asp:Literal ID="response" runat="server"></asp:Literal>
+        <asp:TextBox ID="username" CssClass="input-block-level" runat="server"></asp:TextBox>
+        <asp:TextBox ID="password" CssClass="input-block-level" TextMode="Password" runat="server"></asp:TextBox>
+
         <label class="checkbox">
-          <input type="checkbox" value="remember-me"> Remember me
+            <asp:CheckBox ID="remember" runat="server" /> Remember me
         </label>
-        <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+          <asp:LinkButton ID="login" runat="server" CssClass="btn btn-large btn-primary" OnClick="login_Click">Sign in</asp:LinkButton>
       </form>
 
     </div> <!-- /container -->

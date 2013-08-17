@@ -113,5 +113,17 @@ namespace core
         {
             ((Literal)this.Master.FindControl("js")).Text = m;
         }
+
+        protected void checkAuth()
+        {
+            if (!auth.isLogged()) { Response.Redirect("default.aspx", true); }        
+        }
+
+        protected void init(bool checkSecurity, bool fixUrl = true, bool needAuth = true) 
+        {
+            loadConfig();
+            if (checkSecurity) { checkSecutiry(fixUrl); }
+            if (needAuth) { checkAuth();  }
+        }
     }
 }

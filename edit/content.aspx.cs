@@ -33,17 +33,15 @@ namespace dokap.edit
             string Res = "";
             try
             {
-                loadConfig();
-                checkSecutiry(false);
-
+                init(true, false, true);
                 List<core.fsItem> itemsList = core.ftp.dir(currentDir());
-                Res += css.browserItem("content.aspx?d=" + backDir() + "&s=" + security.sha1SumLoop(backDir()), "", "glyphicon-chevron-left");
+                Res += css.browserItem("content.aspx?d=" + backDir() + "&s=" + security.sha1SumLoop(backDir()),"Back", "", "glyphicon-chevron-left");
 
                 foreach (core.fsItem i in itemsList)
                 {
                     if (i.isDirectory)
                     {
-                        Res += css.browserItem("content.aspx?d=" + currentDir() + i.Name + "/&s=" + security.sha1SumLoop(currentDir() + i.Name + "/"), i.Name, "glyphicon-folder-open");
+                        Res += css.browserItem("content.aspx?d=" + currentDir() + i.Name + "/&s=" + security.sha1SumLoop(currentDir() + i.Name + "/"), i.Name, i.lastModify.ToShortDateString(), "glyphicon-folder-open");
                     }
 
                 }
@@ -52,8 +50,8 @@ namespace dokap.edit
                 {
                     if (!i.isDirectory)
                     {
-                        string link = (i.editable) ? "modify.aspx?d=" + currentDir() + i.Name + "&s=" + security.sha1SumLoop(currentDir() + i.Name) : "#";
-                        Res += css.browserItem(link, i.Name, "glyphicon-list-alt");
+                        string link = (i.editable) ? "modify.aspx?e=" + i.editors + "&d=" + currentDir() + i.Name + "&s=" + security.sha1SumLoop(currentDir() + i.Name) : "#";
+                        Res += css.browserItem(link, i.Name, i.lastModify.ToShortDateString(), "glyphicon-list-alt");
                     }
                 }
             }

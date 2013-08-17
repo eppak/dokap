@@ -40,11 +40,9 @@ namespace dokap.edit
 
         protected void btnUpload_Click(object sender, EventArgs e)
         {
-            loadConfig();
-            checkSecutiry();
-
             try
             {
+                init(true, true, true);
                 if (!uploaded.HasFile) { throw new Exception("No file selected"); }
                 if (uploaded.PostedFile.ContentLength / 1024 > config.UPLOAD_MaxSize) { throw new Exception("Invalid file size"); }
                 if (!config.UPLOAD_Extensions.Contains((new FileInfo(uploaded.PostedFile.FileName)).Extension.ToLower())) { throw new Exception("Invalid file extension"); };

@@ -413,6 +413,7 @@
     <Content Include="edit\content.aspx" />
     <Content Include="edit\create.aspx" />
     <Content Include="edit\Default.aspx" />
+    <Content Include="edit\logoff.aspx" />
     <Content Include="edit\modify.aspx" />
     <Content Include="edit\upload.aspx" />
     <Content Include="Web.config" />
@@ -425,6 +426,14 @@
     <Compile Include="edit\content.aspx.designer.cs">
       <DependentUpon>content.aspx</DependentUpon>
     </Compile>
+    <Compile Include="edit\logoff.aspx.cs">
+      <DependentUpon>logoff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="edit\logoff.aspx.designer.cs">
+      <DependentUpon>logoff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="edit\src\core\auth.cs" />
     <Compile Include="edit\src\core\config.cs" />
     <Compile Include="edit\src\core\logs.cs" />
     <Compile Include="edit\src\css.cs" />

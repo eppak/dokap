@@ -19,50 +19,34 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.IO;
+using System.Web.Security;
 using core;
-using editors;
 
-namespace dokap.edit
+namespace core
 {
-    public partial class modify : core.page
+    public class auth
     {
-        protected int mode() {
-            return Convert.ToInt16(Request.QueryString["m"]);
-        }
 
-        protected object editor() {
-            if (mode() == 0)
-                { return new htmleditor(currentFile(), Request.QueryString["s"]); }
-                else
-            { return new sourceeditor(currentFile(), Request.QueryString["s"]); }
-        }
-
-        protected void Page_Load(object sender, EventArgs e)
+        public static bool login(string username, string password, bool remember = true) 
         {
-            if (!IsPostBack)
+            if ((config.ADMIN_USERNAME == username && config.ADMIN_PASSWORD == password) ||
+                (config.USERNAME == username && config.PASSWORD == password)) 
             {
-                try
-                {
-                    init(true, false, true);
-                    editableItems.Text = ((IEditor)editor()).render(true);
-                    js(((IEditor)editor()).js());
-                }
-                catch (Exception ex) { userMessage(ex.Message, true); }
+                FormsAuthentication.SetAuthCookie(username, remember);
+                return true;            
+            }
+            else
+            {
+                return false;            
             }
         }
 
-        protected void btnCreate_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                init(true, false, true); 
-                editableItems.Text = ((IEditor)editor()).save(Request);
-                js(((IEditor)editor()).js());
-            }
-            catch (Exception ex) { userMessage(ex.Message, true); }
-        }
+        public static string user() { return HttpContext.Current.User.Identity.Name ;}
+
+        public static bool isAdmin() { return config.ADMIN_USERNAME == user(); }
+
+        public static bool isLogged() { return HttpContext.Current.User.Identity.IsAuthenticated; }
+
+        public static void logOff()  { FormsAuthentication.SignOut(); }
     }
 }

@@ -30,8 +30,7 @@ namespace dokap.edit
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            loadConfig();
-            checkSecutiry();
+            init(true, true, true);
 
             if (!IsPostBack) {
                 foreach (string f in config.fileTemplates()) 
@@ -45,6 +44,7 @@ namespace dokap.edit
         {
             try
             {
+                init(true, true, true);
                 if (Name.Text == "") { throw new Exception("Invalid name"); }
                 if (Request.QueryString["t"] == "1")
                 {

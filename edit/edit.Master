@@ -21,34 +21,21 @@
 <!-- /LOADER -->
 
 <form id="form1" runat="server">
-  <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid top-banner">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="/edit/"><%= core.css.appName() %></a>
-          <div class="nav-collapse collapse">
-            <p class="navbar-text pull-right">
-              Logged in as <a href="#" class="navbar-link">Username</a>
-            </p>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
-
     <div class="container-fluid">
       <div class="row-fluid">
         <div class="span1">
-          <div class="sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
+          
+          <div class="sidebar-nav" style="text-align: center">
+            <a class="brand" href="/edit/"><img src="assets/img/dokap_icon_small.png" /></a>
+              <div style="clear: both; margin-bottom: 20px;"></div>
+            <ul class="nav nav-list" style="text-align: left">
               <li class="active"><a href="content.aspx">Contents</a></li>
+              <li><a href="#">Images</a></li>
               <li><a href="#">Options</a></li>
-            </ul>
+              <li><a href="logoff.aspx">Exit</a></li>
+            </ul> 
           </div><!--/.well -->
+
         </div><!--/span-->
 
         <div class="span11 main-content">

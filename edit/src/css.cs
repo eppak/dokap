@@ -24,9 +24,9 @@ namespace core
 {
     public class css
     {
-        public static string browserItem(string link, string name, string icon)
+        public static string browserItem(string link, string name, string date, string icon)
         {
-            return "<a href=\"" + link + "\" class=\"item\"><span class=\"glyphicon " + icon + "\"></span>" + name + "</a>";
+            return "<a href=\"" + link + "\" class=\"item\"><div class=\"name\">" + name + "</div><div class=\"date\"><div class=\"icon glyphicon " + icon + "\"></div>" + date + "</div></a>";
         }
 
         public static string bcItem(string b)
@@ -46,7 +46,7 @@ namespace core
 
         public static string appCopy()
         {
-            return "<a href=\"" + config.STR_APP_LINK + "\" target=\"_blank\">" + config.STR_APP_NAME + " " + config.STR_APP_COPY + " [ver. " + config.STR_APP_VER + "]</a>";
+            return "<a href=\"" + config.STR_APP_LINK + "\" target=\"_blank\">" + config.STR_APP_NAME + " " + config.STR_APP_COPY + " [ver. " + config.STR_APP_VER + "." + config.STR_APP_BUILD + "]</a>";
         }
 
         public static string userMessageOK(string m) 

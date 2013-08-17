@@ -29,7 +29,22 @@ namespace dokap.edit
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            init(false, false, false);
+            username.Attributes.Add("placeholder", "Email address");
+            password.Attributes.Add("placeholder", "Password");
+        }
 
+        protected void login_Click(object sender, EventArgs e)
+        {
+            init(false, false, false);
+            if (auth.login(username.Text, password.Text))
+            {
+                Response.Redirect("content.aspx");
+            }
+            else
+            {
+                response.Text = css.userMessageKO("Invalid username or password.");
+            }
         }
     }
 }
